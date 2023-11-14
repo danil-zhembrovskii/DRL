@@ -89,7 +89,6 @@ def reward1(static, tour_indices,n_nodes):
     start = static.data[:, :, 0].unsqueeze(1)
     y = torch.cat((start, tour,start), dim=1)
 
-    # Euclidean distance between each consecutive point
     tour_len = torch.sqrt(torch.sum(torch.pow(y[:, :-1] - y[:, 1:], 2), dim=2))
     #print(tour_len.sum(1))
     return tour_len.sum(1).detach()
