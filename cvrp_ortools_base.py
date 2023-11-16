@@ -9,7 +9,7 @@ def create_data_model(time_matrix, demand, depo_index, num_vehicles):
     data["num_vehicles"] = num_vehicles
     data["depot"] = depo_index
     data["demands"] = demand
-    data["vehicle_capacities"] = [2000 for n in range(num_vehicles)]
+    data["vehicle_capacities"] = [15000 for n in range(num_vehicles)]
     return data
 
 def print_solution(data, manager, routing, solution, index_mapping):
